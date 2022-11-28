@@ -56,7 +56,7 @@ function init() {
 
   // CHANGE SCENE LIGHTING
   const light = new THREE.HemisphereLight(0x0000FF, 0x666688, 1.5);
-  light.position.set(0, 1, 1.0);
+  light.position.set(100, 1, 1.0);
   scene.add(light);
 
   // Define controls
@@ -194,7 +194,7 @@ function init() {
 var mesh;
 var mesh2;
 var mesh3;
-//var mesh4;
+var mesh4;
 
   // Load GLTF model, add material, and add it to the scene
   const loader = new GLTFLoader().load(
@@ -274,30 +274,30 @@ var mesh3;
         );
 
 
-        // // Load GLTF model, add material, and add it to the scene
-        // const loader4 = new GLTFLoader().load(
-        //   "../assets/spacesphere.glb", // comment this line out and un comment the line below to swithc models
-        //   //"./assets/gourd_web.glb", //<-- photogrammetery model
-        //   function(gltf) {
-        //     // Scan loaded model for mesh and apply defined material if mesh is present
-        //     gltf.scene.traverse(function(child) {
-        //       if (child.isMesh) {
-        //         //child.material = newMaterial;
-        //       }
-        //     });
-        //       // set position and scale
-        //       mesh4 = gltf.scene;
-        //       mesh4.position.set(0, 0, 0);
-        //       mesh4.rotation.set(0, 0, 0);
-        //       mesh4.scale.set(150, 150, 150); // <-- change this to (1, 1, 1) for photogrammetery model
-        //       // Add model to scene
-        //       scene.add(mesh4);
-        //     },
-        //     undefined,
-        //     function(error) {
-        //       console.error(error);
-        //     }
-        //   );
+        // Load GLTF model, add material, and add it to the scene
+        const loader4 = new GLTFLoader().load(
+          "../assets/sword.glb", // comment this line out and un comment the line below to swithc models
+          //"./assets/gourd_web.glb", //<-- photogrammetery model
+          function(gltf) {
+            // Scan loaded model for mesh and apply defined material if mesh is present
+            gltf.scene.traverse(function(child) {
+              if (child.isMesh) {
+                //child.material = newMaterial;
+              }
+            });
+              // set position and scale
+              mesh4 = gltf.scene;
+              mesh4.position.set(0, 0, 100);
+              mesh4.rotation.set(0, 0, 0);
+              mesh4.scale.set(2, 2, 2); // <-- change this to (1, 1, 1) for photogrammetery model
+              // Add model to scene
+              scene.add(mesh4);
+            },
+            undefined,
+            function(error) {
+              console.error(error);
+            }
+          );
 
 
 
