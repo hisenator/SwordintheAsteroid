@@ -198,7 +198,7 @@ var mesh4;
 
   // Load GLTF model, add material, and add it to the scene
   const loader = new GLTFLoader().load(
-    "../assets/crystalmoon.glb", // comment this line out and un comment the line below to swithc models
+    "./assets/crystalmoon.glb", // comment this line out and un comment the line below to swithc models
     //"./assets/gourd_web.glb", //<-- photogrammetery model
     function(gltf) {
       // Scan loaded model for mesh and apply defined material if mesh is present
@@ -225,7 +225,7 @@ var mesh4;
 
     // Load GLTF model, add material, and add it to the scene
     const loader2 = new GLTFLoader().load(
-      "../assets/kaeairlock.glb", // comment this line out and un comment the line below to swithc models
+      "./assets/kaeairlock.glb", // comment this line out and un comment the line below to swithc models
       //"./assets/gourd_web.glb", //<-- photogrammetery model
       function(gltf) {
         // Scan loaded model for mesh and apply defined material if mesh is present
@@ -250,7 +250,7 @@ var mesh4;
 
       // Load GLTF model, add material, and add it to the scene
       const loader3 = new GLTFLoader().load(
-        "../assets/infinityship.glb", // comment this line out and un comment the line below to swithc models
+        "./assets/infinityship.glb", // comment this line out and un comment the line below to swithc models
         //"./assets/gourd_web.glb", //<-- photogrammetery model
         function(gltf) {
           // Scan loaded model for mesh and apply defined material if mesh is present
@@ -276,7 +276,7 @@ var mesh4;
 
         // Load GLTF model, add material, and add it to the scene
         const loader4 = new GLTFLoader().load(
-          "../assets/sword.glb", // comment this line out and un comment the line below to swithc models
+          "./assets/sword.glb", // comment this line out and un comment the line below to swithc models
           //"./assets/gourd_web.glb", //<-- photogrammetery model
           function(gltf) {
             // Scan loaded model for mesh and apply defined material if mesh is present
@@ -305,7 +305,7 @@ var mesh4;
 
 // highway sign 1
 // Load image as texture
-const texture = new THREE.TextureLoader().load( '../../assets/spaceyhighwaysign2.png' );
+const texture = new THREE.TextureLoader().load( './assets/spaceyhighwaysign2.png' );
 // immediately use the texture for material creation
 const material = new THREE.MeshBasicMaterial( { map: texture, side: THREE.DoubleSide } );
 // Create plane geometry
@@ -320,7 +320,7 @@ scene.add( plane );
 
   //highhway sign 2
   // Load image as texture
-  const texture2 = new THREE.TextureLoader().load( '../../assets/spaceyhighwaysign1.png' );
+  const texture2 = new THREE.TextureLoader().load( './assets/spaceyhighwaysign1.png' );
   // immediately use the texture for material creation
   const material2 = new THREE.MeshBasicMaterial( { map: texture2, side: THREE.DoubleSide } );
   // Create plane geometry
